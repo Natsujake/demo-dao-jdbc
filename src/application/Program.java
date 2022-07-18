@@ -12,9 +12,11 @@ public class Program {
 	public static void main(String[] args) {
 				
 		SellersDao sellersDao = DaoFactory.createSellerDao();
-
+		
+		System.out.println("=== TEST 1: Sellers findById ===");
 		Sellers sellers = sellersDao.findById(3);
 		System.out.println(sellers);
+		
 	}
 
 }
