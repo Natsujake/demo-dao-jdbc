@@ -1,8 +1,11 @@
 package application;
 
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
+
 
 
 public class Program2 {
@@ -17,6 +20,11 @@ public class Program2 {
 		System.out.println(department);
 		
 		
+		System.out.println("\n=== TEST 2: Department findAll ===");
+		List<Department> list = departmentDao.findAll();
+		for(Department obj : list) {
+			System.out.println(obj);
+		}
 
 	}
 
