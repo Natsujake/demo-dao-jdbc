@@ -26,12 +26,18 @@ public class Program2 {
 			System.out.println(obj);
 		}
 
-		System.out.println("\n=== TEST 3: Department Insert ===");
-		Department newDepartment = new Department(null, "Games");
-		departmentDao.insert(newDepartment);
-		System.out.println("Inserted! New id= " + newDepartment.getId());
+		
+//		System.out.println("\n=== TEST 3: Department Insert ===");
+//		Department newDepartment = new Department(null, "Games");
+//		departmentDao.insert(newDepartment);
+//		System.out.println("Inserted! New id= " + newDepartment.getId());
 		
 		
+		System.out.println("\n=== TEST 4: Department Update ===");
+		Department department2 = departmentDao.findById(6);
+		department2.setName("Music");
+		departmentDao.update(department2);
+		System.out.println("Update Completed " + department2);
 		
 		
 	}
